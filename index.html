@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> super cool clock</h1>
+    <h2 id="clockDisplay"></h2>
+
+    <script>
+        let clockDisplayElement = document.getElementById("clockDisplay");
+
+        // as soon as the page is rendered updaet the clock
+        clockDisplayElement.innerHTML = new Date(Date.now());
+
+        // and then every 1 second after that update the clock
+                setInterval(() =>{
+            console.log("log happens after one second")
+            clockDisplayElement.innerHTML = new Date(Date.now()).toLocaleString();
+        }, 1000)
+
+        console.log("log happens immediately")
+        // setTimeout(() =>{
+        //     clockDisplayElement.innerHTML = new Date(Date.now());
+        // }, 3000) 
+
+        // console.log("a");
+        // setTimeout(() =>{
+        //     console.log("b")
+        // }, 5000);
+        
+        // console.log("c");
+    </script>
+</body>
+</html>
